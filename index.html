@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora de Rankeadas</title>
+  <link rel="stylesheet" href="css/style.css">
+  
+
+</head>
+<body>
+<!-- Template HTML com modificações realizadas, obtido através da plataforma CodePen.io -->
+<div class="card">
+  <form>
+    <input type="text" id="vitorias" placeholder="Informe a quantidade de Vitórias">
+    <input type="text" id="derrotas" placeholder="Informe a quantidade de Derrotas">
+    <button onclick="calcularRanked()">Calcular Rank</button>
+  </form>
+  <br>
+
+</div>
+
+</body>
+
+<script>
+
+
+  function calcularRanked(){
+  let wins = parseInt(document.getElementById("vitorias").value);
+  let loses = parseInt(document.getElementById("derrotas").value);
+  var nivel = "";
+  
+  function calcSaldo(){
+    let saldoWins = wins-loses
+    return saldoWins;
+  }
+
+  let saldoWins = calcSaldo();
+ 
+if(wins<=10){
+  nivel = "Ferro";
+} else if (wins>=11 && wins<=20){
+  nivel = "Bronze";
+} else if (wins>=21 && wins<=50){
+   nivel = "Prata";
+} else if (wins>=51 && wins<=80){
+  nivel = "Ouro";
+} else if (wins>=81 && wins<=90){
+  nivel = "Diamante";
+} else if (wins>=91 && wins<=100){
+  nivel = "Lendário";
+} else if (wins>=11 && wins<=20){
+  nivel = "Imortal";
+} else if (wins>=101){
+  nivel = "Imortal";
+}
+
+let rank = nivel;
+
+switch (rank){
+
+  case "Ferro":
+  alert("O Herói tem de saldo de " + saldoWins + " vitórias e está no nível de "+ rank)
+  break;
+  case "Bronze":
+  alert("O Herói tem de saldo de " + saldoWins + " vitórias e está no nível de "+ rank)
+  break;
+  case "Prata":
+  alert("O Herói tem de saldo de " + saldoWins + " vitórias e está no nível de "+ rank)
+  break;
+  case "Ouro":
+  alert("O Herói tem de saldo de " + saldoWins + " vitórias e está no nível de "+ rank)
+  break;
+  case "Diamante":
+  alert("O Herói tem de saldo de " + saldoWins + " vitórias e está no nível de "+ rank)
+  break;
+  case "Lendário":
+  alert("O Herói tem de saldo de " + saldoWins + " vitórias e está no nível de "+ rank)
+  break;
+  case "Imortal":
+  alert("O Herói tem de saldo de " + saldoWins + " vitórias e está no nível de "+ rank)
+  break;
+}
+  }
+
+</script>
+
+</html>
